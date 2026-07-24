@@ -1,0 +1,6 @@
+{
+  "name": "Driven Mind Academy",
+  "description": "Expert online Chemistry coaching for CBSE, NEET, and JEE Main aspirants — built on clarity, not cramming.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

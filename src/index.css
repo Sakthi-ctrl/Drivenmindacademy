@@ -1,0 +1,307 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary-navy: #0A2342;
+    --secondary-navy: #102E57;
+    --luxury-gold: #C89B3C;
+    --metallic-gold: #E5B75E;
+    --bg-main: #FAFBFC;
+    --text-dark: #111827;
+    --text-muted: #6B7280;
+    --footer-bg: #050505;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+  }
+
+  body {
+    background-color: #FAFBFC;
+    color: #6B7280;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    overflow-x: hidden;
+  }
+}
+
+/* Typography helper classes matching user specs */
+.font-sans {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.hero-title {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: #0A2342;
+}
+
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 46px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 34px;
+  }
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #0A2342;
+}
+
+@media (max-width: 640px) {
+  .section-title {
+    font-size: 28px;
+  }
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #0A2342;
+}
+
+.btn-text {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.nav-link-text {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.stat-number {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.stat-label {
+  font-weight: 400;
+}
+
+/* Custom Gold Gradients */
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #C89B3C 0%, #E5B75E 50%, #C89B3C 100%);
+}
+
+.bg-gold-gradient-hover {
+  background: linear-gradient(135deg, #D4A647 0%, #F0C469 50%, #D4A647 100%);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #C89B3C 0%, #E5B75E 60%, #B88A2B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-navy-gradient {
+  background: linear-gradient(135deg, #0A2342 0%, #102E57 50%, #0A2342 100%);
+}
+
+/* Luxury Card styling with dynamic animation */
+.luxury-card {
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  border: 1px solid rgba(200, 155, 60, 0.2);
+  box-shadow: 0 4px 20px -4px rgba(10, 35, 66, 0.05);
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.luxury-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  border-color: rgba(200, 155, 60, 0.5);
+  box-shadow: 0 16px 32px -8px rgba(200, 155, 60, 0.22);
+}
+
+/* Primary Button Styling with Shimmer */
+.btn-gold-primary {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #C89B3C 0%, #E5B75E 100%);
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 14px rgba(200, 155, 60, 0.25);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-gold-primary::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(25deg);
+  transition: all 0.6s ease;
+}
+
+.btn-gold-primary:hover::after {
+  left: 130%;
+}
+
+.btn-gold-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(200, 155, 60, 0.45);
+  background: linear-gradient(135deg, #D4A647 0%, #F0C469 100%);
+}
+
+/* Secondary Button Styling */
+.btn-gold-secondary {
+  background-color: #FFFFFF;
+  border: 1px solid #C89B3C;
+  color: #0A2342;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.btn-gold-secondary:hover {
+  background: linear-gradient(135deg, #C89B3C 0%, #E5B75E 100%);
+  color: #FFFFFF;
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(200, 155, 60, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Rich Animations & Keyframes */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0.5deg);
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-14px) scale(1.02);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes rotate-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-pop {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes border-glow-pulse {
+  0%, 100% {
+    border-color: rgba(200, 155, 60, 0.25);
+    box-shadow: 0 0 15px rgba(200, 155, 60, 0.08);
+  }
+  50% {
+    border-color: rgba(200, 155, 60, 0.65);
+    box-shadow: 0 0 25px rgba(200, 155, 60, 0.25);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 9s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+.animate-rotate-slow {
+  animation: rotate-slow 25s linear infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-scale-pop {
+  animation: scale-pop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-border-glow {
+  animation: border-glow-pulse 3s ease-in-out infinite;
+}
+
+/* Hover Lift Utilities */
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px -6px rgba(10, 35, 66, 0.12);
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 25px rgba(200, 155, 60, 0.35);
+}
+
