@@ -47,8 +47,8 @@ export const DemoBookingModal: React.FC<DemoBookingModalProps> = ({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Target WhatsApp Number: +91 99524 70796
-    const whatsappNumber = '919952470796';
+    // Target WhatsApp Number: +91 91500 04584
+    const whatsappNumber = '919150004584';
     const message = getWhatsAppMessage();
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
@@ -96,7 +96,7 @@ export const DemoBookingModal: React.FC<DemoBookingModalProps> = ({
             {/* Sub-banner */}
             <div className="text-[13px] sm:text-[14px] text-[#0A2342] mb-5 bg-[#0A2342]/5 p-3.5 rounded-xl border border-[#C89B3C]/20 flex items-start sm:items-center gap-2.5 font-normal leading-[1.6]">
               <Sparkles className="w-4 h-4 text-[#C89B3C] shrink-0 mt-0.5 sm:mt-0" />
-              <span>Experience our live 2-way interactive whiteboard class before deciding. Direct WhatsApp: <strong>+91 99524 70796</strong></span>
+              <span>Experience our live 2-way interactive whiteboard class before deciding. Direct WhatsApp: <strong>+91 91500 04584</strong></span>
             </div>
 
             {/* Form */}
@@ -144,7 +144,7 @@ export const DemoBookingModal: React.FC<DemoBookingModalProps> = ({
                     <input
                       type="tel"
                       required
-                      placeholder="+91 99524 70796"
+                      placeholder="+91 91500 04584"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-white border border-slate-200 text-[#0A2342] placeholder:text-slate-400 focus:outline-none focus:border-[#C89B3C] focus:ring-2 focus:ring-[#C89B3C]/20 text-[14px] font-normal transition-all"
@@ -235,7 +235,7 @@ export const DemoBookingModal: React.FC<DemoBookingModalProps> = ({
               <div className="text-center pt-1">
                 <span className="text-[11px] text-[#6B7280] font-normal flex items-center justify-center gap-1">
                   <ShieldCheck className="w-3.5 h-3.5 text-[#C89B3C] shrink-0" />
-                  Direct WhatsApp dispatch to <strong>+91 99524 70796</strong>
+                  Direct WhatsApp dispatch to <strong>+91 91500 04584</strong>
                 </span>
               </div>
 
@@ -272,7 +272,7 @@ export const DemoBookingModal: React.FC<DemoBookingModalProps> = ({
               </div>
               <div className="flex justify-between">
                 <span className="text-[#6B7280]">Target WhatsApp:</span>
-                <span className="font-semibold text-[#C89B3C]">+91 99524 70796</span>
+                <span className="font-semibold text-[#C89B3C]">+91 91500 04584</span>
               </div>
             </div>
 
@@ -287,7 +287,7 @@ export const DemoBookingModal: React.FC<DemoBookingModalProps> = ({
               className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-medium text-[15px] tracking-[0.02em] shadow-sm transition-all cursor-pointer hover:scale-[1.01]"
             >
               <MessageCircle className="w-5 h-5 shrink-0" />
-              Send Message on WhatsApp (+91 99524 70796)
+              Send Message on WhatsApp (+91 91500 04584)
             </a>
 
             <div>

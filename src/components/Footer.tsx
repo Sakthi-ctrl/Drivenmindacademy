@@ -1,6 +1,6 @@
 import React from 'react';
 import { CTA_DATA } from '../data/academyData';
-import { Mail, Phone, MapPin, Calendar, MessageCircle, Sparkles } from 'lucide-react';
+import { Mail, Phone, MapPin, Calendar, MessageCircle, Sparkles, Instagram } from 'lucide-react';
 import { Logo } from './Logo';
 
 interface FooterProps {
@@ -108,10 +108,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
               <div className="flex items-start gap-2.5">
                 <Mail className="w-4 h-4 text-[#C89B3C] shrink-0 mt-0.5" />
                 <a 
-                  href="mailto:admissions@drivenmindacademy.com" 
+                  href="mailto:drivenmindacademy@gmail.com" 
                   className="hover:text-[#E5B75E] transition-colors break-all leading-tight"
                 >
-                  admissions@drivenmindacademy.com
+                  drivenmindacademy@gmail.com
                 </a>
               </div>
 
@@ -119,14 +119,30 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#C89B3C] shrink-0" />
                 <a 
-                  href="https://wa.me/919952470796"
+                  href="https://wa.me/919150004584"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-[#E5B75E] transition-colors flex items-center gap-1.5"
                 >
-                  <span>+91 99524 70796</span>
+                  <span>+91 91500 04584</span>
                   <span className="text-[11px] text-[#C89B3C] font-semibold px-2 py-0.5 rounded-full bg-[#C89B3C]/10 border border-[#C89B3C]/20">
                     WhatsApp
+                  </span>
+                </a>
+              </div>
+
+              {/* Instagram */}
+              <div className="flex items-center gap-2.5">
+                <Instagram className="w-4 h-4 text-[#C89B3C] shrink-0" />
+                <a 
+                  href="https://www.instagram.com/drivenmindacademy?utm_source=qr&igsh=aDVobmNxMjE5Mmp1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#E5B75E] transition-colors flex items-center gap-1.5"
+                >
+                  <span>@drivenmindacademy</span>
+                  <span className="text-[11px] text-[#C89B3C] font-semibold px-2 py-0.5 rounded-full bg-[#C89B3C]/10 border border-[#C89B3C]/20">
+                    Instagram
                   </span>
                 </a>
               </div>
@@ -149,7 +165,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
               </button>
 
               <a
-                href="https://wa.me/919952470796?text=Hi%20Driven%20Mind%20Academy%2C%20I%20would%20like%20to%20inquire%20about%20Chemistry%20coaching%20classes."
+                href="https://wa.me/919150004584?text=Hi%20Driven%20Mind%20Academy%2C%20I%20would%20like%20to%20inquire%20about%20Chemistry%20coaching%20classes."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-2.5 px-4 rounded-xl bg-[#0A2342] hover:bg-[#102E57] border border-[#25D366]/40 hover:border-[#25D366] text-white font-medium text-[14px] tracking-[0.02em] shadow-sm flex items-center justify-center gap-2 cursor-pointer transition-all hover:scale-[1.01]"
