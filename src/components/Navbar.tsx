@@ -29,14 +29,14 @@ export const Navbar: React.FC<NavbarProps> = ({ currentView, onNavigate, onOpenB
 
   return (
     <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-xl border-b border-[#C89B3C]/20 text-[#0A2342] transition-all duration-300 shadow-xs">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4 xl:gap-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-22 md:h-24 flex items-center justify-between gap-4 xl:gap-6">
         
-        {/* Brand Logo - Clicking Logo Returns to Home Page */}
+        {/* Brand Logo - Increased Size & Visibility */}
         <button 
           onClick={() => handleNavClick('home')}
-          className="flex items-center gap-2 group focus:outline-none py-1 shrink-0 transition-transform duration-300 hover:scale-105 cursor-pointer text-left"
+          className="flex items-center gap-2 group focus:outline-none py-1.5 shrink-0 transition-transform duration-300 hover:scale-105 cursor-pointer text-left"
         >
-          <Logo variant="compact" size="md" className="group-hover:scale-[1.02] transition-transform duration-200" />
+          <Logo variant="compact" size="lg" className="group-hover:scale-[1.02] transition-transform duration-200" />
         </button>
 
         {/* Desktop Nav Items (Multi-Page Routes) */}
