@@ -3,6 +3,9 @@ import { ProgramItem, ComparisonFeature, WhyUsFeature, QuizQuestion } from '../t
 export const HERO_DATA = {
   headline: "Building Strong Concepts. Inspiring Confident Learners.",
   subheadline: "Expert online Chemistry coaching for CBSE, NEET, and JEE Main aspirants — built on clarity, not cramming.",
+  motto: "Learning with Clarity, Growing with Confidence.",
+  mottoSecondary: "Learn with Clarity. Practice with Discipline. Achieve with Confidence.",
+  chemistryQuote: "Chemistry is not a mystery—it becomes simple when taught the right way.",
   primaryCTA: "Book a Free Demo Class",
   secondaryCTA: "Explore Our Programs",
   stats: [
@@ -15,13 +18,41 @@ export const HERO_DATA = {
 
 export const ABOUT_US_DATA = {
   title: "About Us",
-  leadParagraph: "At Driven Mind Academy, we believe true success in Chemistry comes from understanding — not memorizing.",
+  leadParagraph: "At Driven Mind Academy, we believe that meaningful learning begins with understanding.",
   missionStatement: "Our mission is simple: help students build a rock-solid conceptual foundation that carries them confidently through board exams and competitive entrance tests alike.",
   summaryText: "Through small batches, personalized mentorship, and a structured teaching methodology, we transform Chemistry from a subject to be feared into one to be mastered.",
+  
+  founderStory: {
+    title: "How It Started",
+    subtitle: "Over 12 Years of Dedicated Teaching Experience",
+    quote: "Learning should be a journey to enjoy, not a race to survive.",
+    content: [
+      "With over 12 years of teaching experience, the vision behind Driven Mind Academy was shaped by a simple yet powerful belief: learning should be a journey to enjoy, not a race to survive.",
+      "Education is often reduced to ranks, marks, and competition, where only toppers are celebrated. But true success lies in progress. Every concept understood, every doubt clarified, every small improvement in confidence deserves to be cherished.",
+      "Over the years, it became clear that many students preparing for competitive examinations feel overwhelmed, exhausted, and uncertain — not because they lack potential, but because they lack the right guidance and support. Academic success is not built on pressure alone; it grows through encouragement, understanding, and consistent mentoring.",
+      "At Driven Mind Academy, every student is encouraged to discover their strengths, recognize areas for improvement, and develop the confidence to overcome challenges. When students truly understand what they learn and become aware of how they learn, they gain the ability to excel in any examination.",
+      "The academy was founded to provide more than just coaching. It is a place where students receive personal attention, hands-on guidance, and mentorship from a teacher who understands not only the subject but also the emotions, struggles, and aspirations of every learner.",
+      "What began as the desire to help a few students has steadily grown into a nurturing learning community — rooted in trust, compassion, and the belief that every student deserves the opportunity to learn, grow, and succeed at their own pace."
+    ]
+  },
+
+  aboutAcademy: {
+    title: "About the Academy",
+    content: [
+      "At Driven Mind Academy, we believe that meaningful learning begins with understanding. Every student learns at a different pace, and our goal is to create an environment where students feel comfortable asking questions, exploring concepts, and building confidence step by step.",
+      "Our teaching focuses on conceptual clarity rather than memorization. We encourage students to understand the 'why' behind every concept so that they can apply their knowledge effectively in examinations and beyond. A strong foundation not only improves academic performance but also develops logical thinking and problem-solving skills.",
+      "We maintain small batch sizes to ensure that every student receives individual attention. Regular interaction allows us to identify learning gaps, clarify doubts, and provide timely guidance. Through continuous practice, periodic assessments, and constructive feedback, students are encouraged to improve steadily and develop confidence in their abilities.",
+      "At Driven Mind Academy, discipline, consistency, and sincerity are valued as much as academic achievement. We believe that progress comes from regular effort, not shortcuts. Our role is to guide, support, and motivate students throughout their learning journey while encouraging them to take responsibility for their own growth.",
+      "Chemistry is taught with a strong emphasis on fundamentals, making even challenging topics easier to understand. Whether preparing for CBSE Board examinations, NEET, or JEE, students are guided through a structured learning process that balances theory, application, and examination practice. The objective is not only to complete the syllabus but to ensure that students truly understand what they learn.",
+      "We also recognize the importance of working together with parents. Regular communication and honest feedback help create a supportive environment where students can stay focused and motivated.",
+      "Driven Mind Academy is committed to providing quality education with integrity, patience, and dedication. We do not promise instant success or unrealistic results. Instead, we promise sincere teaching, personal attention, and a learning environment that encourages students to improve with every class."
+    ]
+  },
+
   pillars: [
     {
       title: "Small Batches",
-      desc: "Maximum 6 students per session to ensure every voice is heard and every doubt is cleared instantly."
+      desc: "Maximum 6 students per batch to ensure every single doubt gets addressed live in real time."
     },
     {
       title: "Personalized Mentorship",
@@ -33,6 +64,118 @@ export const ABOUT_US_DATA = {
     }
   ]
 };
+
+export interface FeeStructureItem {
+  id: string;
+  course: string;
+  format: 'Group' | 'One-to-One';
+  schedule: string;
+  details: string;
+  batchSize: string;
+}
+
+export const FEE_STRUCTURE_DATA: FeeStructureItem[] = [
+  {
+    id: "foundation-group",
+    course: "Foundation (NCERT)",
+    format: "Group",
+    schedule: "3 Classes / Week",
+    details: "1 Hour Each Session",
+    batchSize: "Max. 6 Students"
+  },
+  {
+    id: "class11-group",
+    course: "Class 11 Chemistry",
+    format: "Group",
+    schedule: "3 Classes / Week",
+    details: "1 Hour Each Session",
+    batchSize: "Max. 6 Students"
+  },
+  {
+    id: "class12-group",
+    course: "Class 12 Chemistry (Boards)",
+    format: "Group",
+    schedule: "3 Classes / Week",
+    details: "1 Hour Each Session",
+    batchSize: "Max. 6 Students"
+  },
+  {
+    id: "foundation-1on1",
+    course: "Foundation",
+    format: "One-to-One",
+    schedule: "2 Classes / Week",
+    details: "1 Hour Each Session",
+    batchSize: "Personalized (1-on-1)"
+  },
+  {
+    id: "class11-1on1",
+    course: "Class 11 Chemistry",
+    format: "One-to-One",
+    schedule: "2 Classes / Week",
+    details: "1 Hour Each Session",
+    batchSize: "Personalized (1-on-1)"
+  }
+];
+
+export const FEE_STRUCTURE_NOTES = [
+  "Maximum 6 students per group batch. Small batch size ensures individual attention.",
+  "One-to-one classes are personalized and tailored to the student's learning pace.",
+  "Monthly fees are payable in advance.",
+  "Hourly rates are applicable only for trial or extra individual classes."
+];
+
+export interface TermConditionItem {
+  number: number;
+  title: string;
+  summary: string;
+  description: string;
+  tag?: string;
+}
+
+export const TERMS_AND_CONDITIONS_DATA: TermConditionItem[] = [
+  {
+    number: 1,
+    title: "Minimum Enrolment (6 Months)",
+    summary: "Strong foundations take consistency and regular practice.",
+    description: "Building a strong foundation in Chemistry takes time, consistency, and regular practice. Students are therefore encouraged to continue the tuition for a minimum of 6 months, allowing sufficient time to strengthen concepts, develop problem-solving skills, and observe meaningful academic improvement.",
+    tag: "Encouraged 6 Months"
+  },
+  {
+    number: 2,
+    title: "Monthly Fee Payment",
+    summary: "Due on or before the 5th of every month.",
+    description: "To ensure the smooth planning and uninterrupted conduct of classes, monthly tuition fees are to be paid on or before the 5th of every month. Timely payment helps us maintain batch schedules and provide consistent academic support.",
+    tag: "Due by 5th"
+  },
+  {
+    number: 3,
+    title: "Fee Policy",
+    summary: "Non-refundable and non-transferable.",
+    description: "The monthly fee secures a student's place in a limited-size batch and supports the planning of classes and learning resources. Therefore, fees once paid are non-refundable and non-transferable.",
+    tag: "Non-refundable"
+  },
+  {
+    number: 4,
+    title: "Continuity of Learning",
+    summary: "1 month prior notice requested for discontinuation.",
+    description: "To help students benefit fully from the structured learning plan, we encourage them to continue the course for at least 6 months. If, for any reason, a student wishes to discontinue after this period, we kindly request one month's prior notice so that the batch schedule and learning plan can be managed smoothly.",
+    tag: "1 Month Notice"
+  },
+  {
+    number: 5,
+    title: "Regular Attendance",
+    summary: "Consistent attendance avoids critical learning gaps.",
+    description: "Each class is carefully planned and builds upon concepts covered in previous sessions. Regular attendance ensures continuity in learning, better understanding of concepts, and sustained academic progress. Frequent absences may create learning gaps that are difficult to bridge later.",
+    tag: "Mandatory Regularity"
+  },
+  {
+    number: 6,
+    title: "Practice Tests & Assignments",
+    summary: "Essential homework & assessments for exam confidence.",
+    description: "Consistent practice is essential for mastering Chemistry. Assignments, worksheets, and practice tests are designed not only to assess performance but also to reinforce learning, identify areas that need improvement, and build confidence for school examinations and competitive exams. Students are expected to complete them sincerely and within the given time.",
+    tag: "Sincere Effort"
+  }
+];
 
 export const WHY_CHOOSE_US_DATA: WhyUsFeature[] = [
   {
@@ -51,11 +194,11 @@ export const WHY_CHOOSE_US_DATA: WhyUsFeature[] = [
     id: "small-batch",
     title: "Small Batch Learning (Max 6 Students)",
     subtitle: "Individual Focus Guarantee",
-    description: "Every student gets individual attention. No one gets left behind.",
+    description: "Every student gets individual attention. Small batch sizes ensure doubt clarification and personalized feedback.",
     icon: "Users",
     bullets: [
-      "Direct instructor eye contact and continuous monitoring",
-      "Paced according to batch understanding",
+      "Strictly capped at max 6 students per group batch",
+      "Direct instructor attention and continuous monitoring",
       "Friendly, encouraging environment where asking questions is celebrated"
     ]
   },
@@ -67,20 +210,20 @@ export const WHY_CHOOSE_US_DATA: WhyUsFeature[] = [
     icon: "Brain",
     bullets: [
       "Visualizing molecular structures and reaction mechanisms",
-      "Deriving formulas logically rather than rote memorization",
+      "Understanding the 'why' behind every concept",
       "Connecting physical, organic, and inorganic principles"
     ]
   },
   {
     id: "regular-tests",
-    title: "Regular Tests & Performance Analysis",
+    title: "Regular Tests & Assessments",
     subtitle: "Continuous Assessment & Feedback",
-    description: "Continuous assessment and detailed feedback keep students on track and exam-ready.",
+    description: "Class notes, curated practice questions, and regular assessments keep students exam-ready.",
     icon: "BarChart3",
     bullets: [
-      "Weekly topic-wise diagnostic tests & chapter end evaluations",
-      "Detailed error analysis pointing out specific conceptual gaps",
-      "Parent feedback reports & regular growth check-ins"
+      "Structured NCERT-based approach for Boards, NEET, & JEE",
+      "Detailed progress monitoring and effective revision strategies",
+      "Regular communication and honest feedback for parents"
     ]
   }
 ];
@@ -103,8 +246,8 @@ export const PROGRAMS_DATA: ProgramItem[] = [
       organic: ["Haloalkanes & Haloarenes", "Alcohols, Phenols & Ethers", "Aldehydes, Ketones & Carboxylic Acids", "Amines", "Biomolecules"],
       inorganic: ["d and f Block Elements", "Coordination Compounds"]
     },
-    classSchedule: "3 Sessions / Week (1.5 hrs each) + Weekly Test",
-    batchSize: "Strictly Max 6 Students"
+    classSchedule: "3 Classes / Week (1 Hour Each)",
+    batchSize: "Group (Max 6) or One-to-One"
   },
   {
     id: "neet-mastery",
@@ -123,8 +266,8 @@ export const PROGRAMS_DATA: ProgramItem[] = [
       organic: ["GOC & Reaction Mechanisms", "Hydrocarbons", "Functional Groups", "Reaction Intermediates"],
       inorganic: ["Periodic Table & Chemical Bonding", "p-Block & d-Block", "Coordination Chemistry"]
     },
-    classSchedule: "4 Sessions / Week (1.5 hrs each) + NEET Pattern Mock",
-    batchSize: "Strictly Max 6 Students"
+    classSchedule: "3 Classes / Week (1 Hour Each)",
+    batchSize: "Group (Max 6) or One-to-One"
   },
   {
     id: "jee-main-program",
@@ -136,41 +279,41 @@ export const PROGRAMS_DATA: ProgramItem[] = [
       "Analytical & multi-concept numerical problem-solving techniques",
       "Deconstruction of previous 15 years JEE Main NTA questions",
       "Shortcuts for complex Physical Chemistry calculations & Organic synthesis",
-      "Speed building drills to finish Chemistry section under 40 minutes"
+      "Speed building drills to finish Chemistry section with high accuracy"
     ],
     syllabusOverview: {
       physical: ["Atomic Structure", "Thermodynamics & Energetics", "Ionic & Chemical Equilibrium", "Kinetics"],
       organic: ["Stereochemistry", "Reaction Mechanisms (SN1, SN2, E1, E2)", "Named Reactions & Reagents"],
       inorganic: ["Chemical Bonding & Molecular Structure", "Coordination Chemistry", "Salt Analysis"]
     },
-    classSchedule: "4 Sessions / Week (1.5 hrs each) + PYQ Drill Session",
-    batchSize: "Strictly Max 6 Students"
+    classSchedule: "3 Classes / Week (1 Hour Each)",
+    batchSize: "Group (Max 6) or One-to-One"
   }
 ];
 
 export const PHILOSOPHY_DATA = {
   title: "Our Teaching Philosophy",
-  intro: "We don't teach to the test — we teach to understand. Every class is designed to:",
+  intro: "Learn with Clarity. Practice with Discipline. Achieve with Confidence.",
   points: [
     {
       step: "01",
-      title: "Simplify Complex Topics",
-      description: "Break down complex topics into simple, memorable concepts using intuitive physical analogies."
+      title: "Conceptual Clarity",
+      description: "Understand the 'why' behind every concept so you can apply knowledge in examinations and beyond."
     },
     {
       step: "02",
-      title: "Encourage Active Questioning",
-      description: "Encourage active questioning and problem-solving, creating a curiosity-led classroom environment."
+      title: "Individual Attention",
+      description: "Small batch size of max 6 students ensures every doubt is addressed live in real time."
     },
     {
       step: "03",
-      title: "Track Individual Progress",
-      description: "Track individual progress through regular assessments, pinpointing exact areas for improvement."
+      title: "Discipline & Consistency",
+      description: "Progress comes from regular effort, continuous practice, and honest feedback — no shortcuts."
     },
     {
       step: "04",
-      title: "Build Exam Confidence",
-      description: "Build the confidence students need to perform calmly and accurately under exam pressure."
+      title: "Parent-Teacher Synergies",
+      description: "Regular communication and honest feedback create a supportive environment for peak focus."
     }
   ]
 };
@@ -184,29 +327,29 @@ export const COMPARISON_DATA: ComparisonFeature[] = [
   },
   {
     feature: "Teaching Style",
-    drivenMind: "Concept-first",
-    typicalCoaching: "Formula-first",
+    drivenMind: "Concept-first (No memorization)",
+    typicalCoaching: "Formula & Rote memorization",
     iconName: "BookOpen"
   },
   {
     feature: "Attention",
-    drivenMind: "Personalized",
-    typicalCoaching: "Generic",
+    drivenMind: "Personalized mentorship",
+    typicalCoaching: "Generic lectures",
     iconName: "Sparkles"
   },
   {
     feature: "Progress Tracking",
-    drivenMind: "Regular tests + analysis",
+    drivenMind: "Regular tests + parent feedback",
     typicalCoaching: "Occasional/None",
     iconName: "TrendingUp"
   }
 ];
 
 export const CTA_DATA = {
-  headline: "Ready to Build a Stronger Foundation in Chemistry?",
-  body: "Join a small batch. Get personal attention. Learn concepts that stay with you for life.",
+  headline: "Ready to Learn Chemistry the Right Way?",
+  body: "Join a small batch (Max 6). Get personal attention. Experience sincere teaching with zero shortcuts.",
   buttonText: "Book Your Free Demo Class Today",
-  footerTagline: "Driven Mind Academy — Building Strong Concepts. Inspiring Confident Learners."
+  footerTagline: "Driven Mind Academy — Learning with Clarity, Growing with Confidence."
 };
 
 export const SAMPLE_QUIZ_QUESTIONS: QuizQuestion[] = [
@@ -229,8 +372,9 @@ export const SAMPLE_QUIZ_QUESTIONS: QuizQuestion[] = [
 ];
 
 export const TIME_SLOTS = [
-  "Weekday Batch - Evening (5:00 PM - 6:30 PM)",
-  "Weekday Batch - Evening (7:00 PM - 8:30 PM)",
-  "Weekend Special Batch - Morning (10:00 AM - 11:30 AM)",
-  "Weekend Special Batch - Afternoon (2:00 PM - 3:30 PM)"
+  "Group Batch (Max 6) - 3 Classes/Week",
+  "One-to-One Personal Batch - 2 Classes/Week",
+  "Weekday Evening Batch (5:00 PM - 6:30 PM)",
+  "Weekend Special Batch (10:00 AM - 11:30 AM)"
 ];
+

@@ -1,3 +1,5 @@
+export type ViewState = 'home' | 'about' | 'why-us' | 'programs' | 'fees' | 'terms' | 'philosophy' | 'demo';
+
 export interface ProgramItem {
   id: string;
   title: string;
@@ -50,3 +52,4 @@ export interface QuizQuestion {
   conceptFirstApproach: string;
   explanation: string;
 }
+

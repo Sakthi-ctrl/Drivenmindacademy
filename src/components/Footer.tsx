@@ -2,16 +2,18 @@ import React from 'react';
 import { CTA_DATA } from '../data/academyData';
 import { Mail, Phone, MapPin, Calendar, MessageCircle, Sparkles, Instagram } from 'lucide-react';
 import { Logo } from './Logo';
+import { ViewState } from '../types';
 
 interface FooterProps {
+  onNavigate?: (view: ViewState) => void;
   onOpenBooking: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => {
+  const handleNav = (view: ViewState) => {
+    if (onNavigate) {
+      onNavigate(view);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
@@ -45,23 +47,23 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
             <h4 className="text-[15px] font-semibold text-[#E5B75E] uppercase tracking-wider">Our Programs</h4>
             <ul className="space-y-2.5 text-[14px] font-normal">
               <li>
-                <button onClick={() => scrollTo('programs')} className="hover:text-[#E5B75E] transition-colors text-slate-300 text-left cursor-pointer">
+                <button onClick={() => handleNav('programs')} className="hover:text-[#E5B75E] transition-colors text-slate-300 text-left cursor-pointer">
                   CBSE Board Excellence (Class 11 & 12)
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollTo('programs')} className="hover:text-[#E5B75E] transition-colors text-slate-300 text-left cursor-pointer">
+                <button onClick={() => handleNav('programs')} className="hover:text-[#E5B75E] transition-colors text-slate-300 text-left cursor-pointer">
                   NEET Chemistry Mastery Program
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollTo('programs')} className="hover:text-[#E5B75E] transition-colors text-slate-300 text-left cursor-pointer">
+                <button onClick={() => handleNav('programs')} className="hover:text-[#E5B75E] transition-colors text-slate-300 text-left cursor-pointer">
                   JEE Main Chemistry Program
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollTo('why-us')} className="hover:text-[#E5B75E] transition-colors text-slate-300 text-left cursor-pointer">
-                  Small Batch Live Interactive Sessions
+                <button onClick={() => handleNav('fees')} className="hover:text-[#E5B75E] transition-colors text-slate-300 text-left cursor-pointer">
+                  Tuition Fee Structure & Schedule
                 </button>
               </li>
             </ul>
@@ -72,27 +74,37 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
             <h4 className="text-[15px] font-semibold text-[#E5B75E] uppercase tracking-wider">Navigation</h4>
             <ul className="space-y-2.5 text-[14px] font-normal">
               <li>
-                <button onClick={() => scrollTo('about')} className="hover:text-[#E5B75E] transition-colors text-slate-300 text-left cursor-pointer">
-                  About Us
+                <button onClick={() => handleNav('home')} className="hover:text-[#E5B75E] transition-colors text-slate-300 text-left cursor-pointer">
+                  Home Page
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollTo('why-us')} className="hover:text-[#E5B75E] transition-colors text-slate-300 text-left cursor-pointer">
+                <button onClick={() => handleNav('about')} className="hover:text-[#E5B75E] transition-colors text-slate-300 text-left cursor-pointer">
+                  About Us & Founder Story
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNav('why-us')} className="hover:text-[#E5B75E] transition-colors text-slate-300 text-left cursor-pointer">
                   Why Choose Us
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollTo('philosophy')} className="hover:text-[#E5B75E] transition-colors text-slate-300 text-left cursor-pointer">
+                <button onClick={() => handleNav('fees')} className="hover:text-[#E5B75E] transition-colors text-slate-300 text-left cursor-pointer">
+                  Fees & Schedule
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNav('terms')} className="hover:text-[#E5B75E] transition-colors text-slate-300 text-left cursor-pointer">
+                  Terms & Policy
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNav('philosophy')} className="hover:text-[#E5B75E] transition-colors text-slate-300 text-left cursor-pointer">
                   Teaching Philosophy
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollTo('comparison')} className="hover:text-[#E5B75E] transition-colors text-slate-300 text-left cursor-pointer">
-                  What Sets Us Apart
-                </button>
-              </li>
-              <li>
-                <button onClick={() => scrollTo('concept-demo')} className="hover:text-[#E5B75E] transition-colors text-[#C89B3C] font-semibold text-left cursor-pointer">
+                <button onClick={() => handleNav('demo')} className="hover:text-[#E5B75E] transition-colors text-[#C89B3C] font-semibold text-left cursor-pointer">
                   Concept Demo
                 </button>
               </li>
